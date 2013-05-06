@@ -24,18 +24,20 @@
     </p>
 <p>
         <asp:CheckBox ID="checkBoxAdmin" runat="server" 
-            oncheckedchanged="checkBoxAdmin_CheckedChanged" Text="System Administrator" />
+            oncheckedchanged="checkBoxAdmin_CheckedChanged" 
+            Text="System Administrator" AutoPostBack="True" Checked="True" />
     </p>
 <p>
         Application role<br />
         <asp:RadioButton ID="radioButtonUser" runat="server" 
-            GroupName="ApplicationRole" Text="User" />
+            GroupName="ApplicationRole" Text="User" Checked="True" />
         <asp:RadioButton ID="radioButtonManager" runat="server" 
             GroupName="ApplicationRole" Text="Manager" />
         <asp:RadioButton ID="radioButtonDirector" runat="server" 
             GroupName="ApplicationRole" Text="Director" />
     </p>
 <p>
-        <asp:Button ID="buttonSave" runat="server" />
+        <asp:Button ID="buttonSave" runat="server" onclick="buttonSave_Click" 
+            Text="Save" />
     </p>
 </asp:Content>

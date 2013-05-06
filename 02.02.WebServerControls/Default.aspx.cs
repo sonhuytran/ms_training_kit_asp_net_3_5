@@ -9,13 +9,17 @@ public partial class _Default : System.Web.UI.Page
 
     protected void checkBoxAdmin_CheckedChanged(object sender, EventArgs e)
     {
-        if (checkBoxAdmin.Checked)
+        if (this.checkBoxAdmin.Checked)
         {
-            checkBoxAdmin.Text = "System Administrator";
+            this.checkBoxAdmin.Text = "System Administrator";
         }
         else
         {
-            checkBoxAdmin.Text = "Click to check as System Administrator";
+            this.checkBoxAdmin.Text = "Click to check as System Administrator";
         }
+    }
+    protected void buttonSave_Click(object sender, EventArgs e)
+    {
+        this.labelInformation.Text = "User's informations saved";
     }
 }
